@@ -22,6 +22,9 @@ jobs:
         env:
           IMAGE_NAME: uhgsaaspoc.jfrog.io/python-uhg-docker/python-app:${{ github.run_number }}
         run: |
+          pwd
+          ls
+
           jf docker build -t $IMAGE_NAME .
           jf docker push $IMAGE_NAME
           
