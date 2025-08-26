@@ -30,7 +30,7 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=1
 ENV PATH="/venv/bin:$PATH"
 
-COPY /app/app.py /app
+COPY /app/app.py ./
 COPY --from=builder /app/venv /venv
 
 ENTRYPOINT [ "python", "/app/app.py" ]
