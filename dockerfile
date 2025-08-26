@@ -17,7 +17,7 @@ ENV PATH="/app/venv/bin:$PATH"
 WORKDIR /app
 
 RUN python -m venv /app/venv
-COPY app/requirements.txt .
+COPY /app/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -30,7 +30,7 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=1
 ENV PATH="/venv/bin:$PATH"
 
-COPY app.py ./
+COPY /app/app.py ./
 COPY --from=builder /app/venv /venv
 
 ENTRYPOINT [ "python", "/app/app.py" ]
