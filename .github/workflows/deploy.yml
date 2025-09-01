@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: my-runner
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
 
     - name: run the container
       run: |
-        docker run -p 8080:80 uhgsaaspoc.jfrog.io/python-uhg-docker/python-app:latest
+        echo "Running the container..."
 
     # - name: Set up kubectl
     #   uses: azure/setup-kubectl@v3
