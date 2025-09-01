@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: <your-dockerhub-username>/sample-app:latest
+        image: uhgsaaspoc.jfrog.io/python-uhg-docker/python-app:latest
         ports:
         - containerPort: 80
 ---
