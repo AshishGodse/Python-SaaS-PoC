@@ -27,7 +27,7 @@ jobs:
 
     - name: run the container
       run: |
-        echo "Running the container..."
+        echo "Running the container...."
 
     # - name: Set up kubectl
     #   uses: azure/setup-kubectl@v3
